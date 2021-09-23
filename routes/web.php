@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,6 +52,8 @@ Route::middleware('can:admin')->group(function () {
     Route::delete('admin/posts/{post}', [AdminController::class, 'destory']);
 
 });
+
+Route::get('/weather-temp',[WeatherController::class, 'index']);
 
 
 
