@@ -6,7 +6,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\PetrolumController;
 use App\Http\Controllers\WeatherController;
+use App\Models\Petrolum;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,7 +55,9 @@ Route::middleware('can:admin')->group(function () {
 
 });
 
-Route::get('/weather-temp',[WeatherController::class, 'index']);
+Route::get('/product',[PetrolumController::class, 'index']);
+Route::get('/products',[PetrolumController::class,'show']);
+
 
 
 

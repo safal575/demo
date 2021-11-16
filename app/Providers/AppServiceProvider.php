@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
     {
         FacadesGate::define('admin', function (User $user) 
         {
-            return $user->username == 'Safal';
+            return $user->role_name == 'admin';
         });
 
         Blade::if('admin', function() 
